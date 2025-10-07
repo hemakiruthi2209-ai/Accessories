@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop - StyleHub</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body style="background-color: #daadb0;">
+  <header>
+    <nav class="navbar">
+      <div class="logo">Style<span>Hub</span></div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="categories.html" class="active">Shop</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="cart.html" class="cart-link">🛒 <span id="cart-count">0</span></a></li>
+      </ul>
+      <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    </nav>
+  </header>
+
+  <section class="filters">
+    <div class="filter-container">
+      <select id="categoryFilter" onchange="filterProducts()">
+        <option value="all">All Categories</option>
+        <option value="men">Men</option>
+        <option value="women">Women</option>
+        <option value="unisex">Unisex</option>
+      </select>
+      <input type="text" id="searchBar" placeholder="Search accessories..." onkeyup="filterProducts()">
+    </div>
+  </section>
+
+
+  <section class="categories">
+    <h1>Shop Accessories</h1>
+    <div class="grid" id="product-list"></div>
+  </section>
+
+  </main>
+
+    <footer id="main-footer">
+        <div class="footer-container">
+            <div class="footer-info-block">
+                <div class="footer-logo">StyleHub</div>
+                
+                <address class="footer-address">
+                    Address: 123 Fashion Lane, Style City,
+                    <br>Global Accessories Hub, 10001
+                </address>
+
+                <p class="footer-contact">
+                    Email: support@accessoria.com
+                </p>
+                <p class="footer-contact">
+                    WhatsApp Support: +1 (555) 987-6543
+                </p>
+            </div>
+
+            <div class="footer-links-block">
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="index.html" data-page="home">Home</a></li>
+                        <li><a href="categories.html" data-page="categories">Shop</a></li>
+                        <li><a href="about.html" data-page="about">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Important Links</h3>
+                    <ul>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Disclaimer</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom"style="text-align: center;">
+            <p>&copy; 2025 All rights reserved by StyleHub Pvt Ltd</p>
+        </div>
+    </footer>
+
+</body>
+</html>
