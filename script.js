@@ -1,9 +1,7 @@
-// ====== NAVBAR MENU ======
+
 function toggleMenu() {
   document.getElementById("navLinks").classList.toggle("show");
 }
-
-// ====== PRODUCT DATA ======
 const products = [
   { id: 1, name: "Men's Leather Watch", category: "men", price: 2499, img: "watch.img" },
   { id: 2, name: "Women's Handbag", category: "women", price: 1799, img: "bag.img" },
@@ -13,7 +11,6 @@ const products = [
   { id: 6, name: "Wallet Combo Set", category: "men", price: 1499, img: "wallet.img" },
   { id: 7, name: "Women’s Bracelet", category: "women", price: 1299, img: "bracelet.img" },
   { id: 8, name: "Unisex Smart Watch", category: "unisex", price: 3499, img: "swatch.img" },
-
   // ➕ Additional Products
   { id: 9, name: "Men’s Sunglasses", category: "men", price: 1199, img: "sunglasses.img" },
   { id: 10, name: "Women’s Earrings", category: "women", price: 899, img: "earrings.img" },
@@ -28,16 +25,12 @@ const products = [
   { id: 19, name: "Women’s Shoulder Bag", category: "women", price: 1899, img: "shoulderbag.img" },
   { id: 20, name: "Unisex White Sneakers", category: "unisex", price: 2599, img: "sneakers.img" }
 ];
-
-// ====== INITIAL LOAD ======
 window.onload = () => {
   if (document.getElementById("product-list")) loadProducts(products);
   if (document.getElementById("featured-products")) loadFeatured();
   if (document.getElementById("cart-items")) loadCart();
   updateCartCount();
 };
-
-// ====== LOAD PRODUCTS ======
 function loadProducts(list) {
   const container = document.getElementById("product-list");
   if (!container) return;
@@ -56,8 +49,6 @@ function loadProducts(list) {
     </div>
   `).join("");
 }
-
-// ====== FILTER & SEARCH ======
 function filterProducts() {
   const category = document.getElementById("categoryFilter").value;
   const query = document.getElementById("searchBar").value.toLowerCase();
@@ -70,8 +61,6 @@ function filterProducts() {
 
   loadProducts(filtered);
 }
-
-// ====== FEATURED PRODUCTS ======
 function loadFeatured() {
   const container = document.getElementById("featured-products");
   if (!container) return;
@@ -88,8 +77,6 @@ function loadFeatured() {
     `)
     .join("");
 }
-
-// ====== CART MANAGEMENT ======
 function getCart() {
   return JSON.parse(localStorage.getItem("cart") || "[]");
 }
@@ -148,7 +135,7 @@ function removeItem(id) {
 }
 
 function checkout() {
-  alert("🎉 Thank you for shopping with FashionHub! Your order has been placed.");
+  alert(" Thank you for shopping with FashionHub! Your order has been placed.");
   localStorage.removeItem("cart");
   loadCart();
 }
