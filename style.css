@@ -75,9 +75,9 @@ body {
 .btn {
   display: inline-block;
   padding: 10px 20px;
-  background:  #c27278;
+  background:  #e91e63;
   color: #fff;
-  border-radius: 25px;
+  border-radius: 10px;
   text-decoration: none;
   transition: 0.3s;
 }
