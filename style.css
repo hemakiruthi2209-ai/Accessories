@@ -84,22 +84,6 @@ body {
 .btn:hover {
   background: #c2185b;
 }
-@media (max-width: 480px) {
-  .hero {
-    height: 300px;
-    background-position: center;
-    padding: 0.5rem;
-  }
-
-  .hero h1 {
-    font-size: 1.5rem;
-  }
-
-  .hero p {
-    font-size: 0.9rem;
-    margin-top: 100px;
-  }
-}
 section {
   padding: 60px 20px;
   text-align: center;
