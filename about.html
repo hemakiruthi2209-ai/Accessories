@@ -5,85 +5,207 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Us - StyleHub</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    .about {
+      padding: 4rem 8%;
+      text-align: center;
+      color: #333;
+    }
+    .about h1 {
+      color: #c27278;
+      font-size: 2.2rem;
+      margin-bottom: 1.2rem;
+    }
+    .about p {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+    .about-highlights {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin: 3rem 0;
+    }
+    .highlight {
+      background: #fff;
+      border-radius: 12px;
+      padding: 1.5rem;
+      width: 280px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease;
+    }
+    .highlight:hover {
+      transform: translateY(-5px);
+    }
+    .highlight img {
+      width: 60px;
+      margin-bottom: 1rem;
+    }
+    .highlight h3 {
+      color: #c27278;
+      margin-bottom: 0.5rem;
+    }
+    .about-vision {
+      max-width: 800px;
+      margin: 0 auto 3rem;
+    }
+    .about-vision h2 {
+      color: #000000;
+      margin-bottom: 1rem;
+    }
+    .about-gallery h2 {
+      color: #000000;
+      margin-bottom: 1.5rem;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+    .gallery-grid img {
+      width: 100%;
+      height: 230px;
+      object-fit: cover;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+    .gallery-grid img:hover {
+      transform: scale(1.05);
+    }
+    @media (max-width: 768px) {
+      .about {
+        padding: 3rem 6%;
+      }
+      .highlight {
+        width: 100%;
+      }
+    }
+
+    /* ====== FOOTER STYLING ====== */
+    .footer {
+      background-color: #1f1f1f;
+      color: #f8f8f8;
+      padding: 60px 20px 30px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .footer-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 40px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .footer-section h3 {
+      font-size: 18px;
+      margin-bottom: 15px;
+      color: #ffb6c1;
+    }
+
+    .footer-section p {
+      font-size: 14px;
+      line-height: 1.7;
+      color: #dcdcdc;
+    }
+
+    .footer-section ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-section ul li {
+      margin-bottom: 10px;
+    }
+
+    .footer-section ul li a {
+      color: #ccc;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer-section ul li a:hover {
+      color: #ffb6c1;
+    }
+
+    .footer-section form {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
+    .footer-section input[type="email"] {
+      padding: 10px;
+      border: none;
+      outline: none;
+      border-radius: 5px 0 0 5px;
+      flex: 1;
+      min-width: 150px;
+    }
+
+    .footer-section button {
+      padding: 10px 15px;
+      border: none;
+      background-color: #ffb6c1;
+      color: #1f1f1f;
+      border-radius: 0 5px 5px 0;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .footer-section button:hover {
+      background-color: #f191a1;
+    }
+
+    .social-icons {
+      margin-top: 15px;
+    }
+
+    .social-icons a {
+      color: #ffb6c1;
+      font-size: 18px;
+      margin-right: 10px;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      color: #ffffff;
+      transform: scale(1.2);
+    }
+
+    .footer-bottom {
+      text-align: center;
+      margin-top: 40px;
+      border-top: 1px solid #333;
+      padding-top: 15px;
+      font-size: 14px;
+      color: #aaa;
+    }
+
+    @media (max-width: 768px) {
+      .footer {
+        text-align: center;
+      }
+
+      .footer-section form {
+        flex-direction: column;
+      }
+
+      .footer-section input[type="email"],
+      .footer-section button {
+        width: 100%;
+        border-radius: 5px;
+        margin-bottom: 10px;
+      }
+
+      .social-icons a {
+        margin: 0 5px;
+      }
+    }
+  </style>
 </head>
-<style>
-  .about {
-  padding: 4rem 8%;
-  text-align: center;
-  color: #333;
-}
-.about h1 {
-  color: #c27278;
-  font-size: 2.2rem;
-  margin-bottom: 1.2rem;
-}
-.about p {
-  font-size: 1.05rem;
-  line-height: 1.8;
-  margin-bottom: 1rem;
-}
-.about-highlights {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-  margin: 3rem 0;
-}
-.highlight {
-  background: #fff;
-  border-radius: 12px;
-  padding: 1.5rem;
-  width: 280px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease;
-}
-.highlight:hover {
-  transform: translateY(-5px);
-}
-.highlight img {
-  width: 60px;
-  margin-bottom: 1rem;
-}
-.highlight h3 {
-  color: #c27278;
-  margin-bottom: 0.5rem;
-}
-.about-vision {
-  max-width: 800px;
-  margin: 0 auto 3rem;
-}
-.about-vision h2 {
-  color: #000000;
-  margin-bottom: 1rem;
-}
-.about-gallery h2 {
-  color: #000000;
-  margin-bottom: 1.5rem;
-}
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1rem;
-}
-.gallery-grid img {
-  width: 100%;
-  height: 230px;
-  object-fit: cover;
-  border-radius: 10px;
-  transition: transform 0.3s ease;
-}
-.gallery-grid img:hover {
-  transform: scale(1.05);
-}
-@media (max-width: 768px) {
-  .about {
-    padding: 3rem 6%;
-  }
-  .highlight {
-    width: 100%;
-  }
-}
-</style>
 <body style="background-color: white;">
   <header>
     <nav class="navbar">
@@ -99,104 +221,106 @@
   </header>
 
   <section class="about">
-  <h1>About <span style="color: black;">Style</span>Hub</h1>
-  <p>
-    Welcome to <strong>StyleHub</strong> — your go-to destination for premium
-    men’s and women’s accessories. We believe that style is a reflection of
-    personality, and our curated collection is designed to bring out the best
-    in you.
-  </p>
-  <p>
-    From elegant watches to stylish handbags, our goal is to provide quality
-    accessories at affordable prices. Join thousands of happy customers who
-    trust us to keep them fashionable.
-  </p>
-
-  <div class="about-highlights">
-    <div class="highlight">
-      <img src="https://cdn-icons-png.flaticon.com/512/482/482541.png" alt="Quality Icon">
-      <h3>Quality You Can Trust</h3>
-      <p>Every product is handpicked for its superior craftsmanship, durability, and timeless appeal.</p>
-    </div>
-    <div class="highlight">
-      <img src="https://cdn-icons-png.flaticon.com/512/2331/2331970.png" alt="Trends Icon">
-      <h3>Trendy & Timeless</h3>
-      <p>We blend classic elegance with the latest fashion trends to suit every occasion and personality.</p>
-    </div>
-    <div class="highlight">
-      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Customer Icon">
-      <h3>Customer First</h3>
-      <p>Your satisfaction is our priority. From easy returns to quick delivery, we’ve got you covered.</p>
-    </div>
-  </div>
-
-  <div class="about-vision">
-    <h2>Our Vision</h2>
+    <h1>About <span style="color: black;">Style</span>Hub</h1>
     <p>
-      At StyleHub, we envision a world where everyone can express their unique identity
-      through accessories that inspire confidence and creativity. Our mission is to make
-      fashion effortless and accessible for all.
+      Welcome to <strong>StyleHub</strong> — your go-to destination for premium
+      men’s and women’s accessories. We believe that style is a reflection of
+      personality, and our curated collection is designed to bring out the best
+      in you.
     </p>
-  </div>
+    <p>
+      From elegant watches to stylish handbags, our goal is to provide quality
+      accessories at affordable prices. Join thousands of happy customers who
+      trust us to keep them fashionable.
+    </p>
 
-  <div class="about-gallery">
-    <h2>Our Collections</h2>
-    <div class="gallery-grid">
-      <img src="watch.img"alt="Watches">
-      <img src="backpack.img" alt="Handbags">
-      <img src="glasses.img"alt="Sunglasses">
-      <img src="necklace1.img" alt="Jewelry">
+    <div class="about-highlights">
+      <div class="highlight">
+        <img src="https://cdn-icons-png.flaticon.com/512/482/482541.png" alt="Quality Icon">
+        <h3>Quality You Can Trust</h3>
+        <p>Every product is handpicked for its superior craftsmanship, durability, and timeless appeal.</p>
+      </div>
+      <div class="highlight">
+        <img src="https://cdn-icons-png.flaticon.com/512/2331/2331970.png" alt="Trends Icon">
+        <h3>Trendy & Timeless</h3>
+        <p>We blend classic elegance with the latest fashion trends to suit every occasion and personality.</p>
+      </div>
+      <div class="highlight">
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Customer Icon">
+        <h3>Customer First</h3>
+        <p>Your satisfaction is our priority. From easy returns to quick delivery, we’ve got you covered.</p>
+      </div>
     </div>
-  </div>
-</section>
 
+    <div class="about-vision">
+      <h2>Our Vision</h2>
+      <p>
+        At StyleHub, we envision a world where everyone can express their unique identity
+        through accessories that inspire confidence and creativity. Our mission is to make
+        fashion effortless and accessible for all.
+      </p>
+    </div>
 
- </main>
+    <div class="about-gallery">
+      <h2>Our Collections</h2>
+      <div class="gallery-grid">
+        <img src="watch.img" alt="Watches">
+        <img src="backpack.img" alt="Handbags">
+        <img src="glasses.img" alt="Sunglasses">
+        <img src="necklace1.img" alt="Jewelry">
+      </div>
+    </div>
+  </section>
 
-    <footer id="main-footer">
-        <div class="footer-container">
-            <div class="footer-info-block">
-                <div class="footer-logo">StyleHub</div>
-                
-                <address class="footer-address">
-                    Address: 123 Fashion Lane, Style City,
-                    <br>Global Accessories Hub, 10001
-                </address>
+  <!-- ====== FOOTER SECTION ====== -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>About StyleHub</h3>
+        <p>StyleHub brings you a curated collection of men’s and women’s accessories — elegant, modern, and timeless. Stay stylish, stay confident!</p>
+      </div>
 
-                <p class="footer-contact">
-                    Email: support@accessoria.com
-                </p>
-                <p class="footer-contact">
-                    WhatsApp Support: +1 (555) 987-6543
-                </p>
-            </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="categories.html">Our Categories</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
 
-            <div class="footer-links-block">
-                <div class="footer-column">
-                    <h3>Company</h3>
-                    <ul>
-                        <li><a href="index.html" data-page="home">Home</a></li>
-                        <li><a href="categories.html" data-page="categories">Shop</a></li>
-                        <li><a href="about.html" data-page="about">About</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="cart.html">Cart</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Important Links</h3>
-                    <ul>
-                        <li><a href="#">Terms & Conditions</a></li>
-                        <li><a href="#">Disclaimer</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Shipping Info</a></li>
-                    </ul>
-                </div>
-            </div>
+      <div class="footer-section">
+        <h3>Customer Support</h3>
+        <ul>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#">Shipping Policy</a></li>
+          <li><a href="#">Returns & Refunds</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Subscribe</h3>
+        <p>Get exclusive offers and style updates right in your inbox.</p>
+        <form>
+          <input type="email" placeholder="Enter your email" required>
+          <button type="submit">Subscribe</button>
+        </form>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-pinterest"></i></a>
         </div>
+      </div>
+    </div>
 
-        <div class="footer-bottom" style="text-align: center;">
-            <p>&copy; 2025 All rights reserved by StyleHub Pvt Ltd</p>
-        </div>
-    </footer>
+    <div class="footer-bottom">
+      <p>© 2025 StyleHub. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </body>
 </html>
