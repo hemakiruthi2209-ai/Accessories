@@ -5,8 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Us - StyleHub</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="extra-contact.css"> <!-- 👈 New CSS file -->
 </head>
-<body>
+<body style="background-color: #fff7f7;">
   <header>
     <nav class="navbar">
       <div class="logo">Style<span>Hub</span></div>
@@ -29,55 +30,105 @@
       <button type="submit" class="btn">Send Message</button>
     </form>
   </section>
-
-   <footer class="footer">
-  <div class="footer-container">
-    <div class="footer-section about">
-      <h3>About StyleHub</h3>
-      <p>
-        StyleHub brings you premium accessories for men and women — 
-        from timeless watches to elegant handbags. 
-        Elevate your everyday style with our curated collection.
-      </p>
-    </div>
-    <div class="footer-section links">
-      <h3>Quick Links</h3>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="categories.html">Our Categories</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-      </ul>
-    </div>
-    <div class="footer-section service">
-      <h3>Customer Service</h3>
-      <ul>
-        <li><a href="#">FAQ</a></li>
-        <li><a href="#">Shipping & Returns</a></li>
-        <li><a href="#">Privacy Policy</a></li>
-        <li><a href="#">Terms & Conditions</a></li>
-      </ul>
-    </div>
-    <div class="footer-section newsletter">
-      <h3>Stay Connected</h3>
-      <p>Subscribe to our newsletter for exclusive offers and style tips.</p>
-      <form>
-        <input type="email" placeholder="Enter your email" required>
-        <button type="submit">Subscribe</button>
-      </form>
-      <div class="social-icons">
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-x-twitter"></i></a>
-        <a href="#"><i class="fab fa-pinterest"></i></a>
+  <section class="store-info" style="background-color: #fff7f7;">
+    <h2>Visit Our Store</h2>
+    <p>We’d love to meet you in person! Visit our retail outlet to explore our latest collection and get style advice from our experts.</p>
+    
+    <div class="info-grid">
+      <div class="info-item">
+        <h3>📍 Our Location</h3>
+        <p>22 Mission Street, Pondicherry, India</p>
+      </div>
+      <div class="info-item">
+        <h3>🕒 Working Hours</h3>
+        <p>Mon - Sat: 10:00 AM - 8:00 PM<br>Sun: Closed</p>
+      </div>
+      <div class="info-item">
+        <h3>📞 Contact Number</h3>
+        <p>+91 98765 43210</p>
       </div>
     </div>
-  </div>
+    <div class="map-container">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3772.1701581460517!2d72.8296278750536!3d19.014409555225125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7cefae6b4f58b%3A0x90ff4dd93938edb8!2sMumbai%20Fashion%20Street!5e0!3m2!1sen!2sin!4v1695737204584!5m2!1sen!2sin" 
+        width="100%" 
+        height="300" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy">
+      </iframe>
+    </div>
+  </section>
+  <section class="support" style="background-color: #fff7f7;">
+    <h2>Need Quick Help?</h2>
+    <div class="support-grid">
+      <div class="support-item">
+        <i class="fas fa-headset"></i>
+        <h3>24/7 Support</h3>
+        <p>Our team is available round-the-clock to assist you with your orders and queries.</p>
+      </div>
+      <div class="support-item">
+        <i class="fas fa-truck"></i>
+        <h3>Shipping Assistance</h3>
+        <p>Track your orders and get detailed shipping updates anytime, anywhere.</p>
+      </div>
+      <div class="support-item">
+        <i class="fas fa-undo-alt"></i>
+        <h3>Easy Returns</h3>
+        <p>Not satisfied? We offer hassle-free returns and exchanges within 7 days.</p>
+      </div>
+    </div>
+  </section>
 
-  <div class="footer-bottom">
-    <p>© 2025 StyleHub. All Rights Reserved.</p>
-  </div>
-</footer>
-<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section about">
+        <h3>About StyleHub</h3>
+        <p>
+          StyleHub brings you premium accessories for men and women — 
+          from timeless watches to elegant handbags. 
+          Elevate your everyday style with our curated collection.
+        </p>
+      </div>
+      <div class="footer-section links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="categories.html">Our Categories</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-section service">
+        <h3>Customer Service</h3>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Shipping & Returns</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+        </ul>
+      </div>
+      <div class="footer-section newsletter">
+        <h3>Stay Connected</h3>
+        <p>Subscribe to our newsletter for exclusive offers and style tips.</p>
+        <form>
+          <input type="email" placeholder="Enter your email" required>
+          <button type="submit">Subscribe</button>
+        </form>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-x-twitter"></i></a>
+          <a href="#"><i class="fab fa-pinterest"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 StyleHub. All Rights Reserved.</p>
+    </div>
+  </footer>
+  
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </body>
 </html>
