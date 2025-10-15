@@ -1,39 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Cart - StyleHub</title>
+  <title>Your Cart | StyleHub - Premium Fashion Accessories</title>
+  <meta name="description" content="View your shopping cart at StyleHub. Explore luxury watches, handbags, and accessories for men and women. Checkout securely and upgrade your style today!">
+  <meta name="keywords" content="StyleHub cart, accessories checkout, buy watches online, handbags, premium accessories, men’s accessories, women’s fashion, secure checkout">
+  <meta name="author" content="StyleHub Team">
+
+  
+  <meta property="og:title" content="Your Cart | StyleHub - Premium Accessories">
+  <meta property="og:description" content="Explore your StyleHub cart. Checkout premium men’s and women’s accessories that elevate your fashion.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.stylehub.com/cart.html">
+  <meta property="og:image" content="https://www.stylehub.com/assets/og-cart.jpg">
+
+
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+ 
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="extra-cart.css"> 
+  <link rel="stylesheet" href="extra-cart.css">
+  
+  
+  <script defer src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  
+ 
   <script defer src="script.js"></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ShoppingCart",
+    "name": "StyleHub Shopping Cart",
+    "url": "https://www.stylehub.com/cart.html",
+    "potentialAction": {
+      "@type": "BuyAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://www.stylehub.com/checkout"
+      }
+    },
+    "provider": {
+      "@type": "Organization",
+      "name": "StyleHub",
+      "url": "https://www.stylehub.com"
+    }
+  }
+  </script>
 </head>
+
 <body style="background-color: #fff7f7;">
+
+  <!-- ===== HEADER ===== -->
   <header>
-    <nav class="navbar">
-      <div class="logo">Style<span>Hub</span></div>
+    <nav class="navbar" role="navigation" aria-label="Main Navigation">
+      <div class="logo">
+        <a href="index.html" aria-label="StyleHub Home">Style<span>Hub</span></a>
+      </div>
       <ul class="nav-links" id="navLinks">
         <li><a href="index.html">Home</a></li>
-        <li><a href="categories.html">Our categories</a></li>
+        <li><a href="categories.html">Our Categories</a></li>
         <li><a href="about.html">About Us</a></li>
         <li><a href="contact.html">Contact Us</a></li>
-        <li><a href="cart.html" class="active cart-link">🛒 <span id="cart-count">0</span></a></li>
+        <li><a href="cart.html" class="active cart-link" aria-current="page">🛒 <span id="cart-count">0</span></a></li>
       </ul>
-      <div class="menu-icon" onclick="toggleMenu()">☰</div>
+      <div class="menu-icon" onclick="toggleMenu()" aria-label="Menu">☰</div>
     </nav>
   </header>
-  <section class="cart">
-    <h1>Your Shopping Cart</h1>
-    <div id="cart-items" class="cart-items">
-    </div>
 
-    <div class="cart-total">
-      <h3>Total: ₹ <span id="total-price">0</span></h3>
-      <button class="btn checkout-btn" onclick="checkout()">Proceed to Checkout</button>
-    </div>
+  <!-- ===== CART SECTION ===== -->
+  <main>
+    <section class="cart">
+      <h1>Your Shopping Cart</h1>
+      <p class="cart-subtext">Review the products you've selected and proceed to a secure checkout.</p>
+      
+      <div id="cart-items" class="cart-items" aria-live="polite">
+        <!-- Cart items will be dynamically added here -->
+      </div>
 
-  <footer class="footer">
+      <div class="cart-total">
+        <h2>Total: ₹ <span id="total-price">0</span></h2>
+        <button class="btn checkout-btn" onclick="checkout()">Proceed to Checkout</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" role="contentinfo">
     <div class="footer-container">
+      
       <div class="footer-section about">
         <h3>About StyleHub</h3>
         <p>
@@ -42,6 +99,7 @@
           Elevate your everyday style with our curated collection.
         </p>
       </div>
+
       <div class="footer-section links">
         <h3>Quick Links</h3>
         <ul>
@@ -51,6 +109,7 @@
           <li><a href="contact.html">Contact Us</a></li>
         </ul>
       </div>
+
       <div class="footer-section service">
         <h3>Customer Service</h3>
         <ul>
@@ -60,18 +119,20 @@
           <li><a href="#">Terms & Conditions</a></li>
         </ul>
       </div>
+
       <div class="footer-section newsletter">
         <h3>Stay Connected</h3>
         <p>Subscribe to our newsletter for exclusive offers and style tips.</p>
-        <form>
-          <input type="email" placeholder="Enter your email" required>
+        <form aria-label="Newsletter Subscription">
+          <input type="email" placeholder="Enter your email" aria-label="Email Address" required>
           <button type="submit">Subscribe</button>
         </form>
+
         <div class="social-icons">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-x-twitter"></i></a>
-          <a href="#"><i class="fab fa-pinterest"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+          <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
         </div>
       </div>
     </div>
@@ -80,7 +141,5 @@
       <p>© 2025 StyleHub. All Rights Reserved.</p>
     </div>
   </footer>
-  
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </body>
 </html>

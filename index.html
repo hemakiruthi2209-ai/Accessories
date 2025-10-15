@@ -3,84 +3,134 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>StyleHub - Home</title>
+  <title>StyleHub - Premium Men's & Women's Accessories | Shop Watches, Handbags & More</title>
+
+  
+  <meta name="description" content="Shop premium men's and women's accessories at StyleHub — luxury watches, elegant handbags, jewelry, and more. Redefine your style with affordable elegance.">
+  <meta name="keywords" content="StyleHub, fashion accessories, men's watches, women's handbags, jewelry, belts, wallets, scarves, unisex accessories, online shopping, premium fashion">
+  <meta name="author" content="StyleHub Team">
+  <meta name="robots" content="index, follow">
+
+  
+  <meta property="og:title" content="StyleHub - Premium Accessories for Men & Women">
+  <meta property="og:description" content="Discover curated fashion accessories — watches, handbags, jewelry & more. StyleHub helps you define your style.">
+  <meta property="og:image" content="https://yourwebsite.com/assets/preview-image.jpg">
+  <meta property="og:url" content="https://yourwebsite.com/">
+  <meta property="og:type" content="website">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="StyleHub - Premium Accessories for Every Personality">
+  <meta name="twitter:description" content="Shop exclusive men's & women's accessories — from luxury watches to stylish handbags.">
+  <meta name="twitter:image" content="https://yourwebsite.com/assets/preview-image.jpg">
+
+ 
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  
+  <link rel="canonical" href="https://yourwebsite.com/">
+
+  
   <link rel="stylesheet" href="style.css">
   <script defer src="script.js"></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Store",
+    "name": "StyleHub",
+    "url": "https://yourwebsite.com",
+    "logo": "https://yourwebsite.com/assets/logo.png",
+    "description": "StyleHub offers premium men's and women's accessories including watches, handbags, jewelry, and more.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "IN"
+    },
+    "sameAs": [
+      "https://www.facebook.com/stylehub",
+      "https://www.instagram.com/stylehub",
+      "https://twitter.com/stylehub"
+    ]
+  }
+  </script>
 </head>
-<body style="background-color: #fff7f7;;">
+
+<body style="background-color: #fff7f7;">
   <header>
-    <nav class="navbar">
+    <nav class="navbar" aria-label="Main Navigation">
       <div class="logo">Style<span>Hub</span></div>
       <ul class="nav-links" id="navLinks">
         <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="categories.html">Our categories</a></li>
+        <li><a href="categories.html">Our Categories</a></li>
         <li><a href="about.html">About Us</a></li>
         <li><a href="contact.html">Contact Us</a></li>
-        <li><a href="cart.html" class="cart-link">🛒 <span id="cart-count">0</span></a></li>
+        <li><a href="cart.html" class="cart-link" aria-label="Shopping Cart">🛒 <span id="cart-count">0</span></a></li>
       </ul>
-      <div class="menu-icon" onclick="toggleMenu()">☰</div>
+      <div class="menu-icon" onclick="toggleMenu()" aria-label="Toggle menu" role="button">☰</div>
     </nav>
   </header>
 
   <section class="hero">
     <h1>Upgrade Your <span>Style</span></h1>
     <p>Explore exclusive men’s & women’s accessories that define your personality.</p>
-    <a href="categories.html" class="btn">Shop Now</a>
+    <a href="categories.html" class="btn" aria-label="Shop Now">Shop Now</a>
   </section>
 
   <section class="featured">
     <h2>Best Sellers</h2>
-    <div class="grid" id="featured-products">
-    </div>
+    <div class="grid" id="featured-products"></div>
   </section>
+
   <section class="collections">
     <h2>Our Latest Collections</h2>
     <p>Discover premium accessories crafted to perfection. Handpicked designs that redefine elegance.</p>
     <div class="collection-grid">
       <div class="collection-item">
-        <img src="maccess.img" alt="Men's Collection">
+        <img src="maccess.img" alt="Men's accessories collection - watches, belts, wallets">
         <h3>Men’s Collection</h3>
         <p>Luxury watches, belts, wallets, and more designed for modern gentlemen.</p>
       </div>
       <div class="collection-item">
-        <img src="waccess.img" alt="Women’s Collection">
+        <img src="waccess.img" alt="Women's accessories - handbags, jewelry, scarves">
         <h3>Women’s Collection</h3>
         <p>Elegant handbags, jewelry, and scarves to enhance your style statement.</p>
       </div>
       <div class="collection-item">
-        <img src="uaccess.img" alt="Unisex Collection">
+        <img src="uaccess.img" alt="Unisex accessories - sunglasses and trendy pieces">
         <h3>Unisex Accessories</h3>
         <p>Trendy sunglasses and timeless pieces that suit every personality.</p>
       </div>
     </div>
   </section>
+
   <section class="reviews">
     <h2>What Our Customers Say</h2>
     <div class="review-grid">
-      <div class="review-card">
-        <p>“Absolutely love the quality and style! My go-to store for accessories.”</p>
-        <h4>- Nila M</h4>
+      <div class="review-card" itemscope itemtype="https://schema.org/Review">
+        <p itemprop="reviewBody">“Absolutely love the quality and style! My go-to store for accessories.”</p>
+        <h4 itemprop="author">- Nila M</h4>
       </div>
-      <div class="review-card">
-        <p>“Stylish and affordable! Got my handbag delivered in just two days.”</p>
-        <h4>- Bharathi M</h4>
+      <div class="review-card" itemscope itemtype="https://schema.org/Review">
+        <p itemprop="reviewBody">“Stylish and affordable! Got my handbag delivered in just two days.”</p>
+        <h4 itemprop="author">- Bharathi M</h4>
       </div>
-      <div class="review-card">
-        <p>“Fantastic service and premium products. Highly recommend StyleHub!”</p>
-        <h4>- Hema M</h4>
+      <div class="review-card" itemscope itemtype="https://schema.org/Review">
+        <p itemprop="reviewBody">“Fantastic service and premium products. Highly recommend StyleHub!”</p>
+        <h4 itemprop="author">- Hema M</h4>
       </div>
     </div>
   </section>
+
   <footer class="footer">
     <div class="footer-container">
       <div class="footer-section about">
         <h3>About StyleHub</h3>
         <p>
-          StyleHub brings you premium accessories for men and women — 
-          from timeless watches to elegant handbags. 
+          StyleHub brings you premium accessories for men and women —
+          from timeless watches to elegant handbags.
           Elevate your everyday style with our curated collection.
         </p>
       </div>
+
       <div class="footer-section links">
         <h3>Quick Links</h3>
         <ul>
@@ -90,6 +140,7 @@
           <li><a href="contact.html">Contact Us</a></li>
         </ul>
       </div>
+
       <div class="footer-section service">
         <h3>Customer Service</h3>
         <ul>
@@ -99,18 +150,19 @@
           <li><a href="#">Terms & Conditions</a></li>
         </ul>
       </div>
+
       <div class="footer-section newsletter">
         <h3>Stay Connected</h3>
         <p>Subscribe to our newsletter for exclusive offers and style tips.</p>
-        <form>
-          <input type="email" placeholder="Enter your email" required>
+        <form aria-label="Newsletter Subscription">
+          <input type="email" placeholder="Enter your email" required aria-label="Email Address">
           <button type="submit">Subscribe</button>
         </form>
         <div class="social-icons">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-x-twitter"></i></a>
-          <a href="#"><i class="fab fa-pinterest"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+          <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
         </div>
       </div>
     </div>

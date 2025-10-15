@@ -1,93 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+ 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shop - StyleHub</title>
+  <title>Shop Accessories | StyleHub - Men’s, Women’s & Unisex Collections</title>
+  <meta name="description" content="Shop luxury accessories for men, women, and unisex styles at StyleHub. Discover watches, handbags, wallets, jewelry, and more with premium quality and exclusive offers.">
+  <meta name="keywords" content="StyleHub shop, accessories online, men’s watches, women’s handbags, unisex sunglasses, premium accessories, online store">
+  <meta name="author" content="StyleHub Team">
+
+  
+  <meta property="og:title" content="Shop Accessories | StyleHub">
+  <meta property="og:description" content="Explore our exclusive collection of men’s, women’s, and unisex accessories. Shop premium designs that define your style.">
+  <meta property="og:image" content="https://www.stylehub.com/assets/shop-banner.jpg">
+  <meta property="og:url" content="https://www.stylehub.com/categories.html">
+  <meta property="og:type" content="website">
+  
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Shop Accessories | StyleHub">
+  <meta name="twitter:description" content="Explore premium men’s and women’s accessories. Watches, handbags, and jewelry crafted to perfection.">
+  <meta name="twitter:image" content="https://www.stylehub.com/assets/shop-banner.jpg">
+
+ 
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+ 
   <link rel="stylesheet" href="style.css">
   <script defer src="script.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+ 
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org/",
+    "@type": "CollectionPage",
+    "name": "Shop Accessories - StyleHub",
+    "description": "Shop premium men’s, women’s, and unisex accessories from StyleHub. Discover watches, handbags, and more.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "StyleHub",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.stylehub.com/assets/logo.png"
+      }
+    },
+    "mainEntity": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Men's Accessories",
+          "url": "https://www.stylehub.com/categories.html#men"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Women’s Accessories",
+          "url": "https://www.stylehub.com/categories.html#women"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Unisex Accessories",
+          "url": "https://www.stylehub.com/categories.html#unisex"
+        }
+      ]
+    }
+  }
+  </script>
 </head>
-<body style="background-color: #fff7f7;;">
+
+<body style="background-color: #fff7f7;">
+
+  
   <header>
-    <nav class="navbar">
-      <div class="logo">Style<span>Hub</span></div>
+    <nav class="navbar" role="navigation" aria-label="Main Navigation">
+      <div class="logo">
+        <a href="index.html" aria-label="StyleHub Home">Style<span>Hub</span></a>
+      </div>
       <ul class="nav-links" id="navLinks">
         <li><a href="index.html">Home</a></li>
-        <li><a href="categories.html" class="active">Our Categories</a></li>
+        <li><a href="categories.html" class="active" aria-current="page">Our Categories</a></li>
         <li><a href="about.html">About Us</a></li>
         <li><a href="contact.html">Contact Us</a></li>
         <li><a href="cart.html" class="cart-link">🛒 <span id="cart-count">0</span></a></li>
       </ul>
-      <div class="menu-icon" onclick="toggleMenu()">☰</div>
+      <div class="menu-icon" onclick="toggleMenu()" aria-label="Toggle Menu">☰</div>
     </nav>
   </header>
 
-  <section class="filters">
+  
+  <section class="filters" aria-label="Product Filters">
     <div class="filter-container">
+      <label for="categoryFilter" class="visually-hidden">Filter by category</label>
       <select id="categoryFilter" onchange="filterProducts()">
         <option value="all">All Categories</option>
         <option value="men">Men</option>
         <option value="women">Women</option>
         <option value="unisex">Unisex</option>
       </select>
+      
+      <label for="searchBar" class="visually-hidden">Search accessories</label>
       <input type="text" id="searchBar" placeholder="Search accessories..." onkeyup="filterProducts()">
     </div>
   </section>
 
+  
+  <main>
+    <section class="categories">
+      <h1>Shop Accessories</h1>
+      <p>Discover our curated range of men’s, women’s, and unisex accessories. Find premium designs that enhance your unique style.</p>
+      <div class="grid" id="product-list" aria-live="polite">
+        
+      </div>
+    </section>
+  </main>
 
-  <section class="categories">
-    <h1>Shop Accessories</h1>
-    <div class="grid" id="product-list"></div>
-  </section>
+  
+  <footer class="footer" role="contentinfo">
+    <div class="footer-container">
+      <div class="footer-section about">
+        <h3>About StyleHub</h3>
+        <p>
+          StyleHub brings you premium accessories for men and women — 
+          from timeless watches to elegant handbags. 
+          Elevate your everyday style with our curated collection.
+        </p>
+      </div>
 
-   <footer class="footer">
-  <div class="footer-container">
-    <div class="footer-section about">
-      <h3>About StyleHub</h3>
-      <p>
-        StyleHub brings you premium accessories for men and women — 
-        from timeless watches to elegant handbags. 
-        Elevate your everyday style with our curated collection.
-      </p>
-    </div>
-    <div class="footer-section links">
-      <h3>Quick Links</h3>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="categories.html">Our Categories</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-      </ul>
-    </div>
-    <div class="footer-section service">
-      <h3>Customer Service</h3>
-      <ul>
-        <li><a href="#">FAQ</a></li>
-        <li><a href="#">Shipping & Returns</a></li>
-        <li><a href="#">Privacy Policy</a></li>
-        <li><a href="#">Terms & Conditions</a></li>
-      </ul>
-    </div>
-    <div class="footer-section newsletter">
-      <h3>Stay Connected</h3>
-      <p>Subscribe to our newsletter for exclusive offers and style tips.</p>
-      <form>
-        <input type="email" placeholder="Enter your email" required>
-        <button type="submit">Subscribe</button>
-      </form>
-      <div class="social-icons">
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-x-twitter"></i></a>
-        <a href="#"><i class="fab fa-pinterest"></i></a>
+      <div class="footer-section links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="categories.html">Our Categories</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section service">
+        <h3>Customer Service</h3>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Shipping & Returns</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section newsletter">
+        <h3>Stay Connected</h3>
+        <p>Subscribe to our newsletter for exclusive offers and style tips.</p>
+        <form aria-label="Newsletter Subscription">
+          <input type="email" placeholder="Enter your email" aria-label="Email Address" required>
+          <button type="submit">Subscribe</button>
+        </form>
+
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+          <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="footer-bottom">
-    <p>© 2025 StyleHub. All Rights Reserved.</p>
-  </div>
-</footer>
-<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <div class="footer-bottom">
+      <p>© 2025 StyleHub. All Rights Reserved.</p>
+    </div>
+  </footer>
 </body>
 </html>
